@@ -1,0 +1,42 @@
+﻿@using AirlineReservationSystem.Core.Models.AdminArea.Aircraft;
+@model IEnumerable<GetAircraftDataVM>
+
+@{
+    ViewData["Title"] = "Fleet Management";
+}
+<section>
+    <h1>Please choose an action: </h1>
+    <ul style="justify-content:center; padding:10px; display: inline-block">
+        <li>
+            <a asp-area="admin" asp-action="AddAircraft" asp-controller="aircraft" type="button" class="buttons-div btn btn-block bg-gradient-secondary btn-lg">Add an Aircraft</a>
+        </li>
+        <li>
+            <a asp-area="admin" asp-action="RemoveAircraft" asp-controller="aircraft" type="button" class="buttons-div btn btn-block bg-gradient-secondary btn-lg">Remove an Aircraft</a>
+        </li>
+    </ul>
+</section>
+<section>
+    <h1 style="padding:10px"> Current aircrafts in fleet: </h1>
+    <div class="aircraft-div">
+        @if (!Model.Any())
+        {
+            <h2 style="font-size:18px">You have no aircrafts in yout fleet yet!</h2>
+        }
+        else
+        {
+            <ul>
+                @foreach (var aircraft in Model)
+                {
+
+                    <li class="section" style="display:inline-block">
+                        <h2 style="font-size:18px; font-weight: bold">@aircraft.AircraftMakeAndModel</h2>
+                        <h2 style="font-size:18px">Capacity: @aircraft.Capacity</h2>
+                        <img class="aircraft-picture" src=@aircraft.ImageUrl><img>
+                    </li>
+
+
+                }
+            </ul>
+        }
+    </div>
+</section>

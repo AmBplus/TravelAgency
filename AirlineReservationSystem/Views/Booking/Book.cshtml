@@ -1,0 +1,54 @@
+﻿@using AirlineReservationSystem.Core.Models.User_Area
+
+@model IEnumerable<AvailableFlightsVM>
+@{
+    ViewData["Title"] = "Book a Flight";
+}
+
+<section>
+    <div class="col-12">
+        <form>
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="card-title">Available flights</h3>
+                </div>
+            </div>
+            <div>
+                <div class="card-body table-responsive p-0">
+                    <table class="table table-hover text-nowrap">
+                        <thead>
+                            <tr>
+                                <th>Departure destination</th>
+                                <th>Arrival destination</th>
+                                <th>Flight Information</th>
+                                <th>Ticket price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (!Model.Any())
+                            {
+                                <tr>
+                                    <td style="font-size:18px">Currently there are no available flights!</td>
+                                </tr>
+                            }
+                            else
+                            {
+                                @foreach (var flight in Model)
+                                {
+                                    <tr>
+                                        <td>@flight.DepartureDestination</td>
+                                        <td>@flight.ArrivalDestination</td>
+                                        <td>@flight.DateAndTime</td>
+                                        <td>@flight.Price</td>
+                                        <td><button type="submit" formmethod="post" asp-action="book" asp-controller="booking" asp-route-id="@flight.FlightId" class="btn btn-primary">Book</button></td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+

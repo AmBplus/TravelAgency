@@ -1,0 +1,14 @@
+﻿using AirlineReservationSystem.Core.Models.User_Area;
+
+namespace AirlineReservationSystem.Core.Contracts
+{
+    public interface IBaggageService
+    {
+        IEnumerable<AddBaggageVM> GetAvailableBaggageSizes();
+        Task<IEnumerable<ReportLostBaggageVM>> GetBaggagesForBooking(string BookingId, string PassengerId);
+
+        Task<bool> AddBaggageToBooking (string BookingId, string PassengerID, AddBaggageVM model);
+        Task<bool> ReportAsLost (string BaggageId);
+
+    }
+}
