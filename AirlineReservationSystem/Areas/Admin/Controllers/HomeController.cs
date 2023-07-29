@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AirlineReservationSystem.Areas.Admin.Controllers
 {
-    [Authorize(Roles ="Administrator, Fleet Manager, Flight Manager")]
+    [Authorize(Roles =$"{UserConstants.Role.AdministratorRole} ,{"Administrator"},{"Fleet Manager"},{"Flight Manager"}")]
     public class HomeController : BaseController
     {
         public IActionResult Index()

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using AirlineReservationSystem.Data;
 using AirlineReservationSystem.Infrastructure.Models;
 using AirlineReservationSystem.Extensions.Microsoft.Extensions.DependencyInjection;
-
+using AirlineReservationSystem.SeedData;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -28,7 +28,7 @@ builder.Services.AddMemoryCache();
 
 builder.Services.AddApplicationServices();
 var app = builder.Build();
-
+app.Services.AddInitialSeedData(app.Configuration);
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

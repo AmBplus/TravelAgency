@@ -20,4 +20,5 @@ namespace AirlineReservationSystem.Infrastructure.Models
         public string? PassengerId { get; set; }
 
     }
+  
 }

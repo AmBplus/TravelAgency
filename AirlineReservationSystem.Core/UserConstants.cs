@@ -9,6 +9,7 @@
             public const string FlightManagerRole = "Flight Manager";
 
             public const string FleetManagerRole = "Fleet Manager";
+            public const string User = "User";
         }
     }
 }

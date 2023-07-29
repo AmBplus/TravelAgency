@@ -24,7 +24,7 @@ namespace AirlineReservationSystem.Data
             
             modelBuilder.Entity<Aircraft>()
                .HasMany(x => x.Flights);
-
+     
         }
 
 
