@@ -11,13 +11,13 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddApplicationDbContexts(builder.Configuration);
 
 builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
-    .AddEntityFrameworkStores<TravelAgencyDbContext>();
+  .AddRoles<IdentityRole>().AddEntityFrameworkStores<TravelAgencyDbContext>();
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 
-builder.Services.AddMemoryCache();
+//builder.Services.AddMemoryCache();
 
 
 //TODO: Implement redis caching 
@@ -28,7 +28,7 @@ builder.Services.AddMemoryCache();
 
 builder.Services.AddApplicationServices();
 var app = builder.Build();
-app.Services.AddInitialSeedData(app.Configuration);
+await app.UseMapSeedData();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -47,7 +47,16 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+app.MapAreaControllerRoute(
+    name: "Department",
+    areaName: "Admin",
+    pattern: "Admin/{controller=Home}/{action=Index}"
+);
 
+app.MapControllerRoute(
+    name: "areaRoute",
+    pattern: "{area:exists}/{controller}/{action}"
+);
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

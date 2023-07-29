@@ -33,8 +33,9 @@ namespace AirlineReservationSystem.Controllers
         public async Task<IActionResult> Book()
         {
             IEnumerable<AvailableFlightsVM> AvailableFlights;
-
-            if (!this.cache.TryGetValue("AvailableFlights", out IEnumerable<AvailableFlightsVM> flights))
+            this.cache.TryGetValue("AvailableFlights", out IEnumerable<AvailableFlightsVM>? flights);
+            flights = null;
+            if (flights == null )
             {
                 flights = await flightService.GetAllAvailableFlights();
 

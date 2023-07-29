@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 
 namespace AirlineReservationSystem.Areas.Admin.Controllers
 {
-    [Authorize(Roles = UserConstants.Role.FlightManagerRole)]
+    [Authorize(Roles = $"{UserConstants.Role.AdministratorRole},{UserConstants.Role.FlightManagerRole}")]
+    [Route("[area]/Flight/[action]")]
     public class FlightController : BaseController
     {
 

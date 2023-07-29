@@ -13,10 +13,26 @@ namespace AirlineReservationSystem.Core.Services
     public class AircraftService : IAircraftService
     {
         private readonly IApplicatioDbRepository repo;
+        private int field;
+
+        public event EventHandler Event;
 
         public AircraftService(IApplicatioDbRepository _repo)
         {
             repo = _repo;
+        }
+
+        ~AircraftService()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public int Property
+        {
+            get => default;
+            set
+            {
+            }
         }
 
         /// <summary>

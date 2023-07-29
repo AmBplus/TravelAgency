@@ -15,10 +15,9 @@ namespace AirlineReservationSystem.SeedData
 {
     public  static class DatabaseSeedData
     {
-         private static IServiceProvider InitialSeedRole(this IServiceProvider serviceProvider)
+         internal static async  Task InitialSeedRole(RoleManager<IdentityRole> roleManager)
         {
-            var context = serviceProvider.GetService<TravelAgencyDbContext>();
-
+          
             string[] roles = new string[] { UserConstants.Role.AdministratorRole
                 ,UserConstants.Role.FlightManagerRole
                 ,UserConstants.Role.FleetManagerRole 
@@ -26,25 +25,22 @@ namespace AirlineReservationSystem.SeedData
 
             foreach (string role in roles)
             {
-                var roleStore = new RoleStore<IdentityRole>(context);
+                
 
-                if (!context.Roles.Any(r => r.Name == role))
+                if (!roleManager.Roles.Any(r => r.Name == role))
                 {
-                    roleStore.CreateAsync(new IdentityRole(role));
+                   var result =  roleManager.CreateAsync(new IdentityRole(role)).Result;
+                    
+                    
                 }
             }
 
 
-            return serviceProvider;
         }
-        private  static  IServiceProvider InitialSeedUser(this IServiceProvider serviceProvider)
+        internal  static async  Task InitialSeedUser( UserManager<ApplicationUser> _userManager )
         {
 
-          
-            var _userManager = serviceProvider.GetService<UserManager<ApplicationUser>>();
-            var _userStore = serviceProvider.GetService<IUserStore<ApplicationUser>>();
-            var _emailStore = serviceProvider.GetService<IUserEmailStore<ApplicationUser>>();
-            List<UserDto> userDtos = UserDto.GetUserDtoList();
+          List<UserDto> userDtos = UserDto.GetUserDtoList();
             foreach (var userdto in userDtos)
             {
                 if(!_userManager.Users.Any(x => x.Email == userdto.Email))
@@ -53,9 +49,11 @@ namespace AirlineReservationSystem.SeedData
                     {
 
                         var user = CreateUser();
-                        _userStore.SetUserNameAsync(user, userdto.Email, CancellationToken.None).GetAwaiter();
-                        _emailStore.SetEmailAsync(user, userdto.Email, CancellationToken.None).GetAwaiter();
-                        IdentityResult r = _userManager.CreateAsync(user, userdto.Password).GetAwaiter().GetResult();
+                        user.EmailConfirmed = true;
+                        await _userManager.SetUserNameAsync(user, userdto.Email);
+                        await _userManager.SetEmailAsync(user, user.Email);
+                        IdentityResult result = await _userManager.CreateAsync(user, userdto.Password);
+                        await _userManager.AddToRoleAsync(user, userdto.Role);
                     }
                     catch (Exception e)
                     {
@@ -67,16 +65,9 @@ namespace AirlineReservationSystem.SeedData
 
      
 
-            return serviceProvider;
+    
         }
-        public static IServiceProvider AddInitialSeedData(this IServiceProvider services,IConfiguration configuration)
-        {
-
-            services.InitialSeedRole();
-            services.InitialSeedUser();
-
-            return services;
-        }
+ 
         private static ApplicationUser CreateUser()
         {
             try
@@ -96,15 +87,16 @@ namespace AirlineReservationSystem.SeedData
     {
         public string Email { get; set; }
         public string Password { get; set; }    
+        public string Role { get; set; }
         
         public static List<UserDto> GetUserDtoList()
         {
             return new List<UserDto>()
             {
-                new UserDto(){Email = $"{UserConstants.Role.User}@gmail.com",Password = "Te$t12356789"},
-                new UserDto(){Email = $"{UserConstants.Role.AdministratorRole}@gmail.com",Password = "Te$t12356789"},
-                new UserDto(){Email = $"{UserConstants.Role.FleetManagerRole}@gmail.com",Password = "Te$t12356789"},
-                new UserDto(){Email = $"{UserConstants.Role.FlightManagerRole}@gmail.com",Password = "Te$t12356789"}
+                new UserDto(){Email = $"{UserConstants.Role.User}@gmail.com",Password = "Te$t12356789",Role = UserConstants.Role.User},
+                new UserDto(){Email = $"{UserConstants.Role.AdministratorRole}@gmail.com",Password = "Te$t12356789",Role=UserConstants.Role.AdministratorRole},
+                new UserDto(){Email = $"{UserConstants.Role.FleetManagerRole}@gmail.com",Password = "Te$t12356789",Role = UserConstants.Role.FleetManagerRole},
+                new UserDto(){Email = $"{UserConstants.Role.FlightManagerRole}@gmail.com",Password = "Te$t12356789",Role=UserConstants.Role.FlightManagerRole}
             };
         }
     }

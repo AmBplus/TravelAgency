@@ -14,6 +14,7 @@ using System.Threading.Tasks;
 namespace AirlineReservationSystem.Areas.Admin.Controllers
 {
    [Authorize(Roles = UserConstants.Role.AdministratorRole)]
+    [Route("[area]/User/[action]")]
     public class UserController : BaseController
     {
         private readonly RoleManager<IdentityRole> roleManager;

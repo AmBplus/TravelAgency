@@ -47,16 +47,16 @@ namespace AirlineReservationSystem.Controllers
 
             IEnumerable<MyBookingsVM> UserBookings;
 
-            if (!this.cache.TryGetValue("UserBookings", out IEnumerable<MyBookingsVM> data))
-            {
-                data = await passengerService.GetUserBookings(passengerId);
+            //if (!this.cache.TryGetValue("UserBookings", out IEnumerable<MyBookingsVM> data))
+            //{
+            //    data = await passengerService.GetUserBookings(passengerId);
 
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                    .SetSlidingExpiration(TimeSpan.FromSeconds(1000));
+            //    var cacheEntryOptions = new MemoryCacheEntryOptions()
+            //        .SetSlidingExpiration(TimeSpan.FromSeconds(1000));
 
-                this.cache.Set("UserBookings", data, cacheEntryOptions);
-            }
-
+            //    this.cache.Set("UserBookings", data, cacheEntryOptions);
+            //}
+            var  data = await passengerService.GetUserBookings(passengerId);
             UserBookings = data;
 
             return View(UserBookings);

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AirlineReservationSystem.Controllers.BaggageController">
+    <Position X="2.5" Y="1.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAAAgAAAAAQAICAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Controllers\BaggageController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Controllers.BaseController">
+    <Position X="7.75" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\BaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Controllers.BookingController">
+    <Position X="7.75" Y="3" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AKAAAAAABAAAAABAAAAAAAAAgAAAAAAAAAAAIAACAAg=</HashCode>
+      <FileName>Controllers\BookingController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Controllers.HomeController">
+    <Position X="5.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQACAAAAAAAAAAAAAQAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Controllers.PassengerController">
+    <Position X="4.25" Y="4" Width="2.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AKAAAAAAAAAAAACAAAAEAAAgAAQAAAIAAAAAAAACAAA=</HashCode>
+      <FileName>Controllers\PassengerController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Controllers.UserController">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACgAAAAAAAAAAAAAAAgAAEAAAAQAAA=</HashCode>
+      <FileName>Controllers\UserController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Areas.Identity.Pages.Account.LoginModel" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAgAABAAAAAMAAAAQAAAAIEAAAAAAA=</HashCode>
+      <FileName>Areas\Identity\Pages\Account\Login.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Areas.Identity.Pages.Account.LogoutModel" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\Identity\Pages\Account\Logout.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Areas.Identity.Pages.Account.RegisterModel" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <NestedTypes>
+      <Class Name="AirlineReservationSystem.Areas.Identity.Pages.Account.RegisterModel.InputModel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Areas\Identity\Pages\Account\Register.cshtml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAADAAAAQAAAAAgAABAAAAAMgCAAQQAAAIEAAAAAAA=</HashCode>
+      <FileName>Areas\Identity\Pages\Account\Register.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Areas.Identity.Pages.Account.RegisterConfirmationModel" Collapsed="true">
+    <Position X="0.5" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAMAACAAAAAggAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Areas.Identity.Pages.Account.ResetPasswordModel" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.75" />
+    <NestedTypes>
+      <Class Name="AirlineReservationSystem.Areas.Identity.Pages.Account.ResetPasswordModel.InputModel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Areas\Identity\Pages\Account\ResetPassword.cshtml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAEAAAAAAAAAQEAAAAAAA=</HashCode>
+      <FileName>Areas\Identity\Pages\Account\ResetPassword.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Areas.Identity.Pages.Account.AccessDeniedModel" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAA=</HashCode>
+      <FileName>Areas\Identity\Pages\Account\AccessDenied.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Areas.Identity.Pages.Account.ConfirmEmailModel" Collapsed="true">
+    <Position X="3" Y="0.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Areas\Identity\Pages\Account\ConfirmEmail.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Areas.Identity.Pages.Account.ExternalLoginModel" Collapsed="true">
+    <Position X="5.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAADAAAAQAAAAAAAABAAAgIMgCAAAYAAAYAAAAAAAA=</HashCode>
+      <FileName>Areas\Identity\Pages\Account\ExternalLogin.cshtml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

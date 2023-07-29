@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AirlineReservationSystem.Core.Services.AircraftService">
+    <Position X="2.5" Y="2.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gACCAAAAAAAAAAAAAAEAAAAAAgAAAABAQABAAQAAAAA=</HashCode>
+      <FileName>Services\AircraftService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Services.BaggageService">
+    <Position X="5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAEAAAEAAAAAAAAAQAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Services\BaggageService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Services.BookingService">
+    <Position X="11.5" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACBAAAAAAAAAEAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\BookingService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Services.FlightRouteService">
+    <Position X="9.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAEQAAAEAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\FlightRouteService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Services.FlightService">
+    <Position X="7.25" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAEAAAAAAAAAAAAABAACAAAAACA=</HashCode>
+      <FileName>Services\FlightService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Services.PassengerService">
+    <Position X="0.5" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAEAAAAAIAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Services\PassengerService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.22" />
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Services.UserService">
+    <Position X="13.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAIAAAAAAQAAAEAAAAAAQAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Services\UserService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object">
+    <Position X="15.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="AirlineReservationSystem.Core.Contracts.IPassengerService">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAQEAAAA=</HashCode>
+      <FileName>Contracts\IPassengerService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AirlineReservationSystem.Core.Contracts.IAircraftService">
+    <Position X="2.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>gAACAAAAAAAAAAAAAAAAAAAAAAAAAABAQABAAAAAAAA=</HashCode>
+      <FileName>Contracts\IAircraftService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AirlineReservationSystem.Core.Contracts.IBaggageService">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAEAAAAAAAAAAAAAQAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Contracts\IBaggageService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AirlineReservationSystem.Core.Contracts.IFlightService">
+    <Position X="7" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAABAACAAAAACA=</HashCode>
+      <FileName>Contracts\IFlightService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AirlineReservationSystem.Core.Contracts.IFlightRouteService">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAEQAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IFlightRouteService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AirlineReservationSystem.Core.Contracts.IBookingService">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACBAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>Contracts\IBookingService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AirlineReservationSystem.Core.Contracts.IUserService">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAIAAAAAAQAAAAAAAAAAQAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Contracts\IUserService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

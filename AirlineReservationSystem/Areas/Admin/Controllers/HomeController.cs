@@ -4,7 +4,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AirlineReservationSystem.Areas.Admin.Controllers
 {
-    [Authorize(Roles =$"{UserConstants.Role.AdministratorRole} ,{"Administrator"},{"Fleet Manager"},{"Flight Manager"}")]
+    [Authorize(Roles =$"{UserConstants.Role.AdministratorRole},{UserConstants.Role.FleetManagerRole},{UserConstants.Role.FlightManagerRole}")]
+    [Route("Admin/Home")]
     public class HomeController : BaseController
     {
         public IActionResult Index()

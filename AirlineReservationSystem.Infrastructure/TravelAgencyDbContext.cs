@@ -1,4 +1,5 @@
 ﻿using AirlineReservationSystem.Infrastructure.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,7 +25,7 @@ namespace AirlineReservationSystem.Data
             
             modelBuilder.Entity<Aircraft>()
                .HasMany(x => x.Flights);
-     
+            base.OnModelCreating(modelBuilder);
         }
 
 
