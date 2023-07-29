@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AirlineReservationSystem.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    public class TravelAgencyDbContext : IdentityDbContext<ApplicationUser>
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        public TravelAgencyDbContext(DbContextOptions<TravelAgencyDbContext> options)
             : base(options)
         {
 
@@ -21,7 +21,7 @@ namespace AirlineReservationSystem.Data
 
            modelBuilder.Entity<Flight>()
                 .HasOne(x => x.To);
-
+            
             modelBuilder.Entity<Aircraft>()
                .HasMany(x => x.Flights);
 

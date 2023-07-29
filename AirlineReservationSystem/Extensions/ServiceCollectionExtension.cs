@@ -30,10 +30,12 @@ namespace AirlineReservationSystem.Extensions
 
             public static IServiceCollection AddApplicationDbContexts(this IServiceCollection services, IConfiguration config)
             {
-                var connectionString = config.GetConnectionString("DefaultConnection");
-                services.AddDbContext<ApplicationDbContext>(options =>
+                var connectionString = config.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+               
+                services.AddDbContext<TravelAgencyDbContext>(options =>
                     options.UseSqlServer(connectionString));
                 services.AddDatabaseDeveloperPageExceptionFilter();
+             
 
                 return services;
             }

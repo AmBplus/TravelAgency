@@ -5,7 +5,7 @@ namespace AirlineReservationSystem.Infrastructure.Repositories
 {
     public class ApplicatioDbRepository : Repository, IApplicatioDbRepository
     {
-        public ApplicatioDbRepository(ApplicationDbContext context)
+        public ApplicatioDbRepository(TravelAgencyDbContext context)
         {
             this.Context = context;
         }

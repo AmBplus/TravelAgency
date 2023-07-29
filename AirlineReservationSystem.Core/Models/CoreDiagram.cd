@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AirlineReservationSystem.Core.Models.AdminArea.Aircraft.AddAircraftVM">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCQAAAAAAAAAAAAAAAAQACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\AdminArea\Aircraft\AddAircraftVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.AdminArea.Aircraft.GetAircraftDataVM">
+    <Position X="0.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAgAAAAAAAAAAAAAACAAAAAAAIAAAAACAAAAA=</HashCode>
+      <FileName>Models\AdminArea\Aircraft\GetAircraftDataVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.AdminArea.Flight.AddFlightVM">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAhAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Models\AdminArea\Flight\AddFlightVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.AdminArea.Flight.FlightsForCancellationVM">
+    <Position X="7.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAQAAgAAAAAAAAAAAAABAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>Models\AdminArea\Flight\FlightsForCancellationVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.AdminArea.Route.AddFlightRouteVM">
+    <Position X="2.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\AdminArea\Route\AddFlightRouteVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.AdminArea.Route.ListFlightRouteVM">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\AdminArea\Route\ListFlightRouteVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.Users.UserEditVM">
+    <Position X="7.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Models\AdminArea\Users\UserEditVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.Users.UserListVM">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\AdminArea\Users\UserListVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.AdminArea.Users.UserRolesVM">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Models\AdminArea\Users\UserRolesVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.User_Area.AddBaggageVM">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User Area\AddBaggageVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.User_Area.AvailableFlightsVM">
+    <Position X="4" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAQAAgAAAAAAAAAACAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User Area\AvailableFlightsVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.User_Area.EditPassengerDataVM">
+    <Position X="0.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEgAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAACAg=</HashCode>
+      <FileName>Models\User Area\EditPassengerDataVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.User_Area.MyBookingsVM">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAACQAIgAAAACAAAAAAAABIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User Area\MyBookingsVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.User_Area.PastUserFlightsVM">
+    <Position X="6" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAQAIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User Area\PastUserFlightsVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AirlineReservationSystem.Core.Models.User_Area.ReportLostBaggageVM">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\User Area\ReportLostBaggageVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

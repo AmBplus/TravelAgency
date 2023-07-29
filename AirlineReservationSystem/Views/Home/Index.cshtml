@@ -2,7 +2,16 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1 id="homeHeading">Your Favorite Airline</h1>
+            <hr>
+            <p>Fly the greenest airline in Europe to more than 50+ destinations! Book your flight now!</p>
+            <a asp-action="book" asp-controller="booking" class="btn btn-primary btn-xl page-scroll">Book a flight</a>
+        </div>
+    </div>
+</header>
 <section class="bg-primary" id="about">
         <div class="container">
             <div class="row">

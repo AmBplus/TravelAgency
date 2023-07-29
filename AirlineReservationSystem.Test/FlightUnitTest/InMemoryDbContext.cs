@@ -13,23 +13,23 @@ namespace AirlineReservationSystem.Test
 
     {
         private readonly SqliteConnection connection;
-        private readonly DbContextOptions<ApplicationDbContext> dbContextOptions;
+        private readonly DbContextOptions<TravelAgencyDbContext> dbContextOptions;
 
         public InMemoryDbContext()
         {
             connection = new SqliteConnection("Filename=:memory:");
             connection.Open();
 
-            dbContextOptions = new DbContextOptionsBuilder<ApplicationDbContext>()
+            dbContextOptions = new DbContextOptionsBuilder<TravelAgencyDbContext>()
                 .UseSqlite(connection)
                 .Options;
 
-            using var context = new ApplicationDbContext(dbContextOptions);
+            using var context = new TravelAgencyDbContext(dbContextOptions);
 
             context.Database.EnsureCreated();
         }
 
-        public ApplicationDbContext CreateContext() => new ApplicationDbContext(dbContextOptions);
+        public TravelAgencyDbContext CreateContext() => new TravelAgencyDbContext(dbContextOptions);
 
         public void Dispose() => connection.Dispose();
 

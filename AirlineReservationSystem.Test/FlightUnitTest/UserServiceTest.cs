@@ -70,7 +70,7 @@ namespace AirlineReservationSystem.Test
             await SeedDbAsync(repo);
 
             var users = await service.GetUsers();
-            Assert.That(users.ToList().Count.Equals(1));
+            Assert.That(users.ToList().Count.Equals(2));
 
             var OneUser = users.First();
             Assert.AreEqual(OneUser.Email, "raangelova97@gmail.com");
